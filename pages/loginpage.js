@@ -6,7 +6,7 @@ constructor(page){
     this.loignlink='#login2';
     this.usernameinput='#loginusername';
     this .passwordinput='#loginpassword';
-    this.loginButton =page.getByRole('button', { name: 'Log in' });
+    this.loginButton ='btn btn-primary'
 
 
 }
@@ -20,6 +20,7 @@ await this.page.click(this.loignlink);
 await this.page.waitForSelector(this.usernameinput);
 await this.page.fill(this.usernameinput,username);
 await this.page.fill(this.passwordinput,password);
+await this.page.getByRole('button', { name: 'Log in' }).click();
 }
 }
 /*export class loginPage {

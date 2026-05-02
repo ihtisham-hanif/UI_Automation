@@ -20,7 +20,7 @@ export class Homepage {
             if (name.trim().toLowerCase() === productName.toLowerCase()) {
                 await product.click();
                 break;
-            }
+            }   
         }
 
         // handle alert popup
